@@ -36,7 +36,7 @@ Walli-server is a white label exchange (Xchange) that has a centralised matching
 
 The picture below depicts the one specific case of tangled subamarine swap that allows on-chain to on-chain exchange of assets.
 
-![Image](https://github.com/dopetard/Documents/blob/master/pic2.png)
+![Image](https://github.com/dopetard/Documents/blob/master/pictwo.png)
 
 ### Future work
 Chains with high block mining time like BTC (10 minutes for 1 confirmation) wouldn’t allow for BTC limit order to be sent to walli-server via on-chain wallet. Under this model, BTC on-chain limit orders can only be delegated to walli-server via off chain lightning wallet. 
