@@ -32,8 +32,11 @@ This picture depicts our proposed architecture
 
 
 
-Walli-server is a white label exchange (Xchange) that has a centralised matching engine order book, it is running a XUD full node and connecting to all other XUDs through it. There are users connected to walli-server via a client app. The client app can be on chain or off chain wallet. The user sends a 100 Ether market order that expires in 45 seconds to Walli-server via submarine swap, walli-server liquidates that 100 Ether for 1000 BNB by using decentralised layer two trading powered by peer XUDs. The walli-server swaps 1000 BNB back to user via on-chain or off-chain submarine swap. In case when walli-server isn’t able to liquidate those 100 Ether within 45 seconds, it initiates the refund via the swap again. Walli-server is essentially a submarine swap provider and makes money via routing fee. It is also possible for walli-server to accept limit orders from users. The front running isn’t a problem because walli-server is running a centralised matching engine orderbook and queuing the orders itself. The problem of stale orders can also be mitiagted by constantly pruning of order book.
+Walli-server is a white label exchange (Xchange) that has a centralised matching engine order book, it is running a XUD full node and connecting to all other XUDs through it. There are users connected to walli-server via a client app. The client app can be on chain or off chain wallet. The user sends a 100 Ether market order that expires in 45 seconds to Walli-server via submarine swap, walli-server liquidates that 100 Ether for 1000 BNB by using decentralised layer two trading powered by peer XUDs. The walli-server swaps 1000 BNB back to user via on-chain or off-chain submarine swap. In case when walli-server isn’t able to liquidate those 100 Ether within 45 seconds, it initiates the refund via the swap again. Walli-server is essentially a submarine swap provider and makes money via routing fee. It is also possible for walli-server to accept limit orders from users. The front running isn’t a problem because walli-server is running a centralised matching engine orderbook and queuing the orders itself. The problem of stale orders can also be mitiagted by constant pruning of order book.
 
+The picture below depicts the one specific case of tangled subamarine swap that allows on-chain to on-chain exchange of assets.
 
 ![Image](https://github.com/dopetard/Documents/blob/master/Pic2.png)
+
+
 
