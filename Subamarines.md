@@ -2,7 +2,7 @@
 
 ### Abstarct
 
-We Propose an alternative architecture for white label exchange, which connects with Exchange Union daemon to facilitate
+We propose an alternative architecture for white label exchange, which connects with Exchange Union daemon to facilitate
 end-to-end trading of digital assets in trustless and decentralised manner.
 
 ### Pain points
