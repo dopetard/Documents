@@ -1,4 +1,4 @@
-## Alice, Bob, and the Chamber of Entwined Submarines 
+# Alice, Bob, and the Chamber of Entwined Submarines 
 
 ### Abstarct
 
@@ -13,7 +13,7 @@ entrepreneurs to be a Xchange service provider. Furthermore, this architecture r
 control user's XUC in hot wallet. This centralises the architecture and makes it hard to explore the utility of XUC 
 for the governance model akin to ZRX token in [0x architecture](https://blog.0xproject.com/governance-in-0x-protocol-86779ae5809e)
 This proposed model also doesn't work with on chain wallets, ispo facto, pushing the prospect of widespread adoption further in future.
-Our model reduces the maximum user fund lock-up time from 96 hours to 10 minutes. 
+Our model reduces the maximum user fund lock-up time from 96 hours to 10 minutes (1 confirmation on BTC mainnet) 
 
 ## Approach
 Submarine Swap allows users to pay someone on chain and have payment to them be contingent on them paying a payment channel invoice (say lightning invoice) the user sends to them. It safeguards user funds by giving the user ability to refund the funds after a timelock. It is very useful if user wants to pay a lightning Invoice but uses on-chain funds to do that. A submarine swap has an on-chain side that can be virtually any chain, so the altcoins don’t need to have SegWit or an LN implementation for this to work. Go Doge! Submarine swap between on-chain LTC to off-chain BTC has been recently successfully [tested](https://twitter.com/alexbosworth/status/1025168088595984384) by Alex Bosworth. 
@@ -38,5 +38,9 @@ The picture below depicts the one specific case of tangled subamarine swap that 
 
 ![Image](https://github.com/dopetard/Documents/blob/master/Pic2.png)
 
+### Future work
+Chains with high block mining time like BTC (10 minutes for 1 confirmation) wouldn’t allow for BTC limit order to be sent to walli-server via on-chain wallet. Under this model, BTC on-chain limit orders can only be delegated to walli-server via off chain lightning wallet. 
+
+We also propose to consider integrating btcd light client on XUD itself, it will allow market makers to send market orders directly to XUD via on chain wallet by bypassing white label exchange and saving lot of fees. It will also help liquidate the base BTC pair market in XU ecosystem and allow for better decentralisation of XUC (since market makers will need to stake it) The XUC governance model utility can also be easy to implement under this model. These are all high level ideas and needs further exploration.  
 
 
