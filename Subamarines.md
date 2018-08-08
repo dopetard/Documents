@@ -1,4 +1,4 @@
-# Alice, Bob, and the Chamber of Entwined Submarines 
+# Alice, Bob, and the tale of Entwined Submarines 
 
 ### Abstarct
 
