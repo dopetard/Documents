@@ -1,12 +1,11 @@
 ## Alice, Bob, and the Chamber of Entwined Submarines 
 
-### Title
+### Abstarct
 
 We Propose an alternative architecture for white label exchange, which connects with Exchange Union daemon to facilitate
 end-to-end trading of digital assets in trustless and decentralised manner.
 
 ### Pain points
-
 The previous proposed architecture for white label exchange incorporates the tradeoff of trusting Xchange service providers,
 for usability benefit of users not needing to run a full node or light client to be able to trade. This model requires Xchange
 service providers to host a hot wallet of user funds, which in turn escalates the security risks and raises the bar for normal
@@ -17,7 +16,6 @@ This proposed model also doesn't work with on chain wallets, ispo facto, pushing
 Our model reduces the maximum user fund lock-up time from 96 hours to 10 minutes. 
 
 ## Approach
-
 Submarine Swap allows users to pay someone on chain and have payment to them be contingent on them paying a payment channel invoice (say lightning invoice) the user sends to them. It safeguards user funds by giving the user ability to refund the funds after a timelock. It is very useful if user wants to pay a lightning Invoice but uses on-chain funds to do that. A submarine swap has an on-chain side that can be virtually any chain, so the altcoins don’t need to have SegWit or an LN implementation for this to work. Go Doge! Submarine swap between on-chain LTC to off-chain BTC has been recently successfully [tested](https://twitter.com/alexbosworth/status/1025168088595984384) by Alex Bosworth. 
 
 Apart from aforementioned on-chain to off-chain swap, it is also possible to implement off-chain to on-chain swaps. Both being hooked up to one other, will result in on-chain to on-chain 
@@ -29,10 +27,13 @@ This picture depicts our proposed architecture
 
 
 
+![Image](https://github.com/dopetard/Documents/blob/master/pic1.png)
 
 
 
 
+Walli-server is a white label exchange (Xchange) that has a centralised matching engine order book, it is running a XUD full node and connecting to all other XUDs through it. There are users connected to walli-server via a client app. The client app can be on chain or off chain wallet. The user sends a 100 Ether market order that expires in 45 seconds to Walli-server via submarine swap, walli-server liquidates that 100 Ether for 1000 BNB by using decentralised layer two trading powered by peer XUDs. The walli-server swaps 1000 BNB back to user via on-chain or off-chain submarine swap. In case when walli-server isn’t able to liquidate those 100 Ether within 45 seconds, it initiates the refund via the swap again. Walli-server is essentially a submarine swap provider and makes money via routing fee. It is also possible for walli-server to accept limit orders from users. The front running isn’t a problem because walli-server is running a centralised matching engine orderbook and queuing the orders itself. The problem of stale orders can also be mitiagted by constantly pruning of order book.
 
-Walli-server is a white label exchange (Xchange) that has a centralised matching engine order book, it is running a XUD full node and connecting to all other XUDs through it. There are users connected to walli-server via a client app. The client app can be on chain or off chain wallet. The user sends a 100 Ether market order that expires in 45 seconds to Walli-server via submarine swap, walli-server liquidates that 100 Ether for 1000 BNB by using decentralised layer two trading powered by peer XUDs. The walli-server swaps back 1000 BNB back to user via on-chain or off-chain submarine swap. In case when walli-server isn’t able to liquidate those 100 Ether within 45 second, it initiates the refund via the swap again. Walli-server is essentially a submarine swap provider and makes money via routing fee. It is also possible for walli-server to accept limit orders from users. The front running isn’t a problem because walli-server is running a centralised matching engine orderbook and queuing the orders itself. The problem of stale orders can also be mitiagted by constant pruning of order book.
+
+![Image](https://github.com/dopetard/Documents/blob/master/Pic2.png)
 
