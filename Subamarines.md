@@ -10,7 +10,7 @@ The previous proposed architecture for white label exchange incorporates the tra
 for usability benefit of users not needing to run a full node or light client to be able to trade. This model requires Xchange
 service providers to host a hot wallet of user funds, which in turn escalates the security risks and raises the bar for normal
 entrepreneurs to be a Xchange service provider. Furthermore, this architecture requires Xchanages to stake up XUC and also 
-collect XUC as fees from their users. This centralises the architecture and makes it hard to explore the utility of XUC 
+control user's XUC in hot wallet. This centralises the architecture and makes it hard to explore the utility of XUC 
 for the governance model akin to ZRX token in [0x architecture](https://blog.0xproject.com/governance-in-0x-protocol-86779ae5809e)
 This proposed model also doesn't work with on chain wallets, ispo facto, pushing the prospect of widespread adoption further in future.
 Our model reduces the maximum user fund lock-up time from 96 hours to 10 minutes. 
