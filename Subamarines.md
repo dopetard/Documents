@@ -22,7 +22,7 @@ Apart from aforementioned on-chain to off-chain swap, it is also possible to imp
 
 This picture depicts our proposed architecture:
 
-![Image](https://github.com/dopetard/Documents/blob/master/pic1.png)
+![Image](https://github.com/dopetard/Documents/blob/master/2ndpic.png)
 
 Walli-server is a white label exchange (Xchange) that has a centralised matching engine order book, it is running a XUD full node and connecting to all other XUDs through it. 
 
