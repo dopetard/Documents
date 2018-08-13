@@ -35,4 +35,4 @@ The picture below depicts  one specific case of tangled subamarine swap that all
 ### Future work
 Chains with high block mining time like BTC (10 minutes for 1 confirmation) makes limit orders to be sent to walli-server via an on-chain wallet unbidden and requires users to take the inevitable volatility into account. Under this model, BTC on-chain limit orders can only be delegated to walli-server via an off-chain lightning wallet.
 
-We also propose to consider integrating BTCD into XUD itself, it will allow market makers to send market orders directly to XUD via an on-chain wallet by bypassing white label exchanges and save lots of fees. It will also help liquidate the base BTC pair market in the XU ecosystem and allow for more decentralisation of XUC (since market makers will need to stake it). The XUC governance model utility can also be easy to implement under this model. These are all high level ideas and needs further exploration.  
+The XUC governance model utility can also be easy to implement under this model. These are all high level ideas and needs further exploration.  
