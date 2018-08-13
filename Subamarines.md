@@ -26,9 +26,11 @@ This picture depicts our proposed architecture:
 
 Walli-server is a white label exchange (Xchange) that has a centralised matching engine order book, it is running a XUD full node and connecting to all other XUDs through it. There are users connected to walli-server via a client app. The client app can be an on-chain or off-chain wallet. The user sends a 100 Ether market order that expires in 45 seconds to Walli-server via a submarine swap, walli-server liquidates that 100 Ether for 1000 BNB by using decentralised layer two trading powered by XUD. The walli-server swaps 1000 BNB back to user via an on-chain to off-chain submarine swap. In the case of walli-server not being able to liquidate those 100 Ether within 45 seconds, it initiates the refund via the swap again. The business model made possible by this architecture is also pretty strightforward - Walli-server is essentially a submarine swap provider and makes money via swap and routing fees. It is also possible for walli-server to accept limit orders from users. The problem of stale orders can also be mitiagated by constant pruning of order book.
 
-The picture below depicts the one specific case of tangled subamarine swap that allows on-chain to off-chain exchange of assets.
+The picture below depicts  one specific case of tangled subamarine swap that allows offchain to on-chain exchange of assets. Consider a scenario where Alice is using Walli, but she only has Ethereum in her off-chain wallet. She intends to buy 2000 XUC for her 1 ETH. Alice sends her 1 ETH to Walli-server via her offchain wallet. Walli-server puts on the order to exchange Alice's Ether for XUC via XUD instance. After successful completion of atomic swap, Walli-server has 2000 XUC in it's second layer wallet which should be sent to Alice, but here's the catch - Alice doesn't have or want her XUC in layer two walli wallet, so Walli-server uses submarine swap to transfer her XUC on-chain to Walli-vault - all this while maintaing the trustless-ness of the system. 
 
-![Image](https://github.com/dopetard/Documents/blob/master/pictwo.png)
+
+
+![Image](https://github.com/dopetard/Documents/blob/master/secondpic.png)
 
 ### Future work
 Chains with high block mining time like BTC (10 minutes for 1 confirmation) makes limit orders to be sent to walli-server via an on-chain wallet unbidden and requires users to take the inevitable volatility into account. Under this model, BTC on-chain limit orders can only be delegated to walli-server via an off-chain lightning wallet.
