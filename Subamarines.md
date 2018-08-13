@@ -22,7 +22,7 @@ Apart from aforementioned on-chain to off-chain swap, it is also possible to imp
 
 This picture depicts our proposed architecture:
 
-![Image](https://github.com/dopetard/Documents/blob/master/2ndpic.png)
+![Image](https://github.com/dopetard/Documents/blob/master/pic1.png)
 
 Walli-server is a white label exchange (Xchange) that has a centralised matching engine order book, it is running a XUD full node and connecting to all other XUDs through it. 
 
@@ -31,7 +31,7 @@ The picture below depicts one specific case of tangled subamarine swap that allo
 
 
 
-![Image](https://github.com/dopetard/Documents/blob/master/secondpic.png)
+![Image](https://github.com/dopetard/Documents/blob/master/2ndpic.png)
 
 ### Future work
 Chains with high block mining time like BTC (10 minutes for 1 confirmation) makes limit orders to be sent to walli-server via an on-chain wallet unbidden and requires users to take the inevitable volatility into account. Under this model, BTC on-chain limit orders can only be delegated to walli-server via an off-chain lightning wallet.
